@@ -8,11 +8,6 @@ let isRegistered = prompt("Enter registration status(yes/no): ");
 isCitizen = (isCitizen === "citizen");
 isRegistered = (isRegistered === "yes");
 
-console.log(isCitizen);
-console.log(isRegistered);
-console.log(userAge < 18);
-console.log(!isCitizen);
-console.log(!isRegistered);
 // Logic
 // if (userAge < 18) {
 //     console.log("not eligible due to age.");
@@ -26,3 +21,18 @@ console.log(!isRegistered);
 // else {
 //     console.log("eligible to vote.");
 // }
+
+if (userAge >= 18) {
+    if (isCitizen) {
+        if (isRegistered) {
+            console.log("eligible to vote.");
+        } else {
+            console.log("not eligible due to registration status.")
+        }
+    } else {
+        console.log("not eligible due to citizenship status.");
+    }
+} else {
+    console.log("You are not eligible for vote(Younger)");
+
+}
