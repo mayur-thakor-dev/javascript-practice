@@ -17,7 +17,13 @@
 
 //? Using Array constructor
 
+// let fruits = new Array("Mango", "Banana", "Apple");
+// console.log(fruits);
+
 //? Using array literal
+
+// let numbers = [1, 2, 3, 4, 5];
+// console.log(numbers);
 
 //? we can also create an empty array
 
@@ -35,18 +41,42 @@
 //*  Array Traversal / Iterating Over Arrays
 //* ============================================
 //?👉 Array Traversal / Iterating Over Arrays
+
 //? 1: for of loop , also known as iterable
 //* for...of Loop: The for...of loop is used to iterate over the values of an iterable object, such as arrays, strings, or other iterable objects.
+
+// let colors = ["red","violate","yellow","blue"];
+
+// for(let element of colors){
+//     console.log(element);
+// }
 
 //? 2: for in loop
 //* for...in Loop: The for...in loop is used to iterate over the properties (including indices) of an object.
 
+// let colors = ["red","violate","yellow","blue"];
+
+// for(let element in colors){
+//     console.log(element);
+// }
+
 // ? 3: forEach Method
 //* The arr.forEach() method calls the provided function once for each element of the array. The provided function may perform any kind of operation on the elements of the given array.
+// let colors = ["red", "violate", "yellow", "blue"];
+
+// colors.forEach((currElm, index, arr) => {
+//     console.log(`${currElm}`);
+// })
 
 // ? 4: map function
 //* map() creates a new array from calling a function for every array element. map() does not change the original array.
 
+let colors = ["red", "violate", "yellow", "blue"];
+
+let newColorArr = colors.map((currElm, index, arr) => {
+    return currElm;
+})
+console.log(newColorArr);
 //todo Practice Time
 //! write a program to Multiply each element with 2
 // const numbers = [1, 2, 3, 4, 5];
