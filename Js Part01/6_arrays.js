@@ -102,17 +102,12 @@ console.log(newColorArr);
 
 //* syntax
 //? splice(start, deleteCount, item1, item2, /* …, */ itemN)
-// let fruits = ["apple", "orange", "banana", "mango"];
+let fruits = ["apple", "orange", "banana", "mango"];
 
 //! what if you want to add the element at the end
+fruits.splice(fruits.length, 0, "Gauva");
+console.log(fruits);
 
-//todo Challenge time
-// 1: Add Dec at the end of an array?
-// 2: What is the return value of splice method?
-// 3: Update march to March (update)?
-// 4: Delete June from an array?
-
-// const months = ["Jan", "march", "April", "June", "July"];
 
 //* =========================================
 //*  Searching in an Array
@@ -130,9 +125,17 @@ console.log(newColorArr);
 //? 2: lastIndexOf Method: The lastIndexOf() method of Array instances returns the last index at which a given element can be found in the array, or -1 if it is not present. The array is searched backwards, starting at fromIndex.
 
 //? 3: The includes method checks whether an array includes a certain element, returning true or false.
+
 // Syntax
 // includes(searchElement)
 // includes(searchElement, fromIndex)
+
+//todo Challenge time
+// const months = ["Jan", "march", "April", "June", "July"];
+// 1: Add Dec at the end of an array?
+// 2: What is the return value of splice method?
+// 3: Update march to March (update)?
+// 4: Delete June from an array?
 
 //* =========================================
 //*  Filter in an Array
@@ -208,3 +211,199 @@ console.log(newColorArr);
 // index (optional): The index of the current element being processed.
 // array (optional): The array reduce was called upon.
 // initialValue (optional): An initial value for the accumulator. If not provided, the first element of the array is used as the initial accumulator value.
+
+
+// ================================================================================
+
+// # 📌 JavaScript Sorting, Map, Filter — Quick Notes
+
+// ## 🔹 1. map()
+
+// 👉 Use when: **You want to transform every element**
+
+// * Returns: **New array (same length)**
+// * Changes values
+
+// ### Example:
+
+// ```js
+// [1, 2, 3].map(n => n * 2)
+// // [2, 4, 6]
+// ```
+
+// 💡 Rule:
+// “I want to change each item” → use `map()`
+
+// ---
+
+// ## 🔹 2. filter()
+
+// 👉 Use when: **You want to select some elements**
+
+// * Returns: **Subset of array**
+// * Keeps only true conditions
+
+// ### Example:
+
+// ```js
+// [1, 2, 3, 4].filter(n => n % 2 === 0)
+// // [2, 4]
+// ```
+
+// 💡 Rule:
+// “I want to keep only some items” → use `filter()`
+
+// ---
+
+// ## 🔹 3. Unique Values
+
+// ### Remove duplicates:
+
+// ```js
+// const unique = [...new Set(arr)];
+// ```
+
+// ### Only values that appear once:
+
+// ```js
+// arr.filter(
+//   (val, _, self) =>
+//     self.indexOf(val) === self.lastIndexOf(val)
+// );
+// ```
+
+// ---
+
+// ## 🔹 4. sort() Basics
+
+// 👉 `sort()` arranges elements in order
+
+// ⚠️ Default behavior:
+
+// * Converts values to **strings**
+// * Can give wrong result for numbers
+
+// ```js
+// [10, 2, 5].sort()
+// // [10, 2, 5] ❌
+// ```
+
+// ---
+
+// ## 🔹 5. Compare Function (MOST IMPORTANT)
+
+// ```js
+// arr.sort((a, b) => a - b);
+// ```
+
+// ### How it works:
+
+// | Return value | Meaning         |
+// | ------------ | --------------- |
+// | negative     | `a` comes first |
+// | positive     | `b` comes first |
+// | 0            | no change       |
+
+// ---
+
+// ## 🔹 6. Sorting Numbers
+
+// ### Ascending:
+
+// ```js
+// arr.sort((a, b) => a - b);
+// ```
+
+// 👉 Small → Big
+
+// ---
+
+// ### Descending:
+
+// ```js
+// arr.sort((a, b) => b - a);
+// ```
+
+// 👉 Big → Small
+
+// ---
+
+// ## 🔹 7. Sorting Strings
+
+// ```js
+// arr.sort((a, b) => a.localeCompare(b));
+// ```
+
+// ---
+
+// ## 🔹 8. Sorting Objects
+
+// ### By number:
+
+// ```js
+// users.sort((a, b) => a.age - b.age);
+// ```
+
+// ### By string:
+
+// ```js
+// users.sort((a, b) => a.name.localeCompare(b.name));
+// ```
+
+// ---
+
+// ## 🔹 9. Important Points
+
+// ❗ `sort()` modifies original array
+
+// To avoid mutation:
+
+// ```js
+// const sorted = [...arr].sort((a, b) => a - b);
+// ```
+
+// ---
+
+// ## 🔹 10. Simple Memory Rules
+
+// * map → transform
+
+// * filter → select
+
+// * sort → arrange
+
+// * `a - b` → ascending
+
+// * `b - a` → descending
+
+// ---
+
+// ## 🔹 11. Best Practice (Real-world)
+
+// ```js
+// data
+//   .filter(...)
+//   .sort(...)
+//   .map(...)
+// ```
+
+// 👉 First filter → then sort → then map
+
+// ---
+
+// # 🧠 Self-Testing Questions
+
+// 1. Why does `[10, 2].sort()` fail?
+// 2. What does `(a, b) => a - b` return?
+// 3. Difference between map and filter?
+// 4. How to get unique values?
+// 5. How to sort objects by name?
+
+// ---
+
+// # 🎯 One-Line Summary
+
+// 👉 map = change
+// 👉 filter = keep
+// 👉 sort = arrange
+// 👉 compare = decide order
