@@ -8,29 +8,29 @@
 
 //? Number: Represents numeric values, including integers and floating-point numbers.
 // Example:
-var myFavNum = -5;
-console.log(myFavNum);
+// var myFavNum = -5;
+// console.log(myFavNum);
 
 //? String: Represents a sequence of characters enclosed in single or double quotes.
 // Example:
-var myName = 'vinod';
-console.log(myName);
+// var myName = 'vinod';
+// console.log(myName);
 
 //? Boolean: Represents a logical entity with two values: true or false.
 // Example:
-var isRaining = false;
-var areYouAwesome = true;
-console.log(isRaining);
+// var isRaining = false;
+// var areYouAwesome = true;
+// console.log(isRaining);
 
 //? undefined: Represents the absence of a value or an uninitialized variable.
 // Example:
-var vinod;
-console.log(vinod);
+// var vinod;
+// console.log(vinod);
 
 //? Null: Represents the absence of a value. It is often used to explicitly indicate that a variable or object property has no assigned value.
 // Example:
-var badMemories = null;
-console.log(badMemories);
+// var badMemories = null;
+// console.log(badMemories);
 
 //? BigInt: Represents integers of arbitrary precision (available since ECMAScript 2020).
 // Example:
@@ -46,8 +46,6 @@ console.log(badMemories);
 
 //? 1: What is the difference between null and undefined in JavaScript❓
 
-//     “In JavaScript, undefined is the default value assigned by JavaScript when a variable is declared but not initialized.
-// On the other hand, null is a value that I explicitly assign to represent an empty or no value.”
 // null: Imagine an Empty Box
 // //* Explanation: Think of a variable as a box. When we say a box has null inside, it's like having an empty box. The box exists, but there's nothing valuable or meaningful inside it.
 
@@ -66,22 +64,22 @@ console.log(badMemories);
 //? 2: What is the purpose of typeof operator in JavaScript❓
 
 // var myName = 1;
-console.log(myName);
-console.log(typeof myName);
+// console.log(myName);
+// console.log(typeof myName);
 
 //? 3: What is the result of `typeof null` in JavaScript❓
-var badMemories = null;
-console.log(badMemories);
-console.log(typeof null); // object
+// var badMemories = null;
+// console.log(badMemories);
+// console.log(typeof null);
 
 //? 4: What are primitive data types in JavaScript❓
 
 //? 5: Convert a string to a number?
 // We just need to add the '+' sign before the string
 // Example:
-var myFavNum = "10";
-console.log(typeof +myFavNum);
-console.log(typeof Number(myFavNum));
+// var myFavNum = "10";
+// console.log(typeof +myFavNum);
+// console.log(typeof Number(myFavNum));
 
 //? 6: Convert a number to a string?
 // We just need to add an empty string after the number
@@ -89,10 +87,6 @@ console.log(typeof Number(myFavNum));
 
 // var str = 5;
 // console.log(typeof str);
-console.log("Convert a number to a string");
-let str = 20;
-console.log(typeof (str));
-console.log(typeof String(str));
 
 //? 7: Explain the concept of truthy and falsy values in JavaScript. Provide examples.❓
 //* In JavaScript, values are either considered "truthy" or "falsy" when evaluated in a boolean context.
@@ -160,27 +154,21 @@ console.log(typeof String(str));
 // +console.log(parseFloat("1.9"));
 // 1 (decimal part is truncated)
 
-// console.log(parseInt("-123"));
 //! When we will not get an Output
 // console.log(parseInt("&123"));
+// console.log(parseInt("-123"));
 // console.log(parseInt("xyz"));
 // NaN (input can't be converted to an integer)
 
 //? What is the purpose of the NaN value in JavaScript❓
-// “The purpose of NaN is to indicate that a mathematical operation or number conversion has failed or resulted in an invalid number.”
-
-console.log(0 / 0);        // NaN
-console.log("abc" * 2);    // NaN
-console.log(Number("hi")); // NaN
 //? NaN stands for "Not a Number" and is returned when a mathematical operation doesn't yield a valid number.
 //? Also, to check whether a value is number or not we can use isNaN() function.
 
 // console.log(isNaN("vinod"));
-
 // console.log(parseInt("xyz"));
 // console.log(parseInt("@#$"));
 
-// //! NaN === NaN, Why is it false ❓ you can see above two console.log which are NAN but input are different that's why is false.
+// //! NaN === NaN, Why is it false ❓
 // if (NaN == NaN) {
 //   console.log("both are equal ");
 // } else {

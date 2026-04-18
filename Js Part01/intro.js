@@ -1,1 +1,1 @@
-console.log("This is external Js file");
+console.log("I am an external JS File");
